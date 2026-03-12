@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌙 Eid Mubarak</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:radial-gradient(circle at top,#111,#000);
+color:white;
+text-align:center;
+overflow-x:hidden;
+animation:fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+h1{
+font-size:60px;
+background:linear-gradient(90deg,#ffd700,#fff2a6,#ffd700);
+-webkit-background-clip:text;
+color:transparent;
+text-shadow:0 0 30px gold;
+margin-bottom:20px;
+}
+
+.card{
+background:#0f0f0f;
+border:2px solid gold;
+border-radius:20px;
+padding:25px;
+margin:25px auto;
+max-width:750px;
+box-shadow:0 0 30px rgba(255,215,0,0.4);
+}
+
+button{
+background:linear-gradient(45deg,gold,#ffcc00);
+border:none;
+padding:14px 25px;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+margin:6px;
+transition:0.3s;
+}
+button:hover{transform:scale(1.05)}
+
+input,textarea{
+width:85%;
+padding:12px;
+border-radius:12px;
+border:none;
+margin-top:12px;
+}
+
+img{
+width:220px;
+border-radius:15px;
+border:4px solid gold;
+position:relative;
+}
+
+.moon{
+width:130px;
+height:130px;
+background:radial-gradient(circle,#fff,#ddd);
+border-radius:50%;
+margin:20px auto;
+box-shadow:0 0 50px white;
+animation:float 5s infinite ease-in-out;
+}
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+.firework{
+position:fixed;
+width:7px;
+height:7px;
+background:gold;
+border-radius:50%;
+animation:boom 1s ease-out forwards;
+}
+@keyframes boom{
+0%{transform:scale(1);opacity:1}
+100%{transform:scale(9);opacity:0}
+}
+#game{position:relative;height:280px;background:#111;border:2px solid gold;overflow:hidden;}
+#player{position:absolute;bottom:10px;left:150px;font-size:32px;}
+.gift{position:absolute;font-size:28px;}
+.footer{padding:40px;font-size:15px;opacity:.9}
+.ad{margin-top:20px;font-size:13px;color:#ccc}
+.content-box{display:none;margin-top:15px;background:#141414;padding:20px;border-radius:12px;border:1px solid gold;position:relative}
+.hand{position:absolute;width:40px;height:40px;background:gold;border-radius:50%;animation:wave 2s infinite alternate;}
+@keyframes wave{0%{transform:translateY(0)}100%{transform:translateY(-20px)}}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="nasheed.mp3" type="audio/mpeg">
+</audio>
+
+<div class="moon"></div>
+<h1>🌙 ঈদ মোবারক 🌙</h1>
+
+<div class="card">
+<h2 style="font-size:32px;color:#ffd700">📜 মুজাহিদের পক্ষ থেকে ঈদের চিঠি</h2>
+<p style="font-size:20px;line-height:1.6">
+আসসালামু আলাইকুম।<br>
+পবিত্র ঈদ উপলক্ষে আপনাদের সবাইকে জানাই আন্তরিক শুভেচ্ছা ও ভালোবাসা।<br>
+আল্লাহ আমাদের সকলের জীবন সুখ, শান্তি ও বরকতে ভরে দিন।<br><br>
+🌙 ঈদ মোবারক 🌙
+</p>
+</div>
+
+<div class="card">
+<div class="section-title">🖱️ ঈদ সম্পর্কিত মেসেজ ও দরখাস্ত</div>
+<div class="menu">
+<button onclick="showBox('caption')">ঈদ ক্যাপশন</button>
+<button onclick="showBox('hadith')">হাদিস</button>
+<button onclick="showBox('dua')">দোয়া</button>
+<button onclick="showBox('letter')">ঈদ চিঠি</button>
+<button onclick="showBox('bonus')">বোনাস দরখাস্ত</button>
+</div>
+
+<div id="caption" class="content-box">
+🌙 ঈদ মোবারক! আল্লাহ আমাদের সকলকে সুখে রাখুন।<br>🤍 ঈদের আনন্দ ছড়িয়ে পড়ুক সবার মাঝে।
+</div>
+<div id="hadith" class="content-box">
+রাসূল (সা.) বলেছেন: যে ব্যক্তি ঈদের দিনে অন্যকে আনন্দ দেয় আল্লাহ তাকে আনন্দ দান করেন।
+</div>
+<div id="dua" class="content-box">
+تَقَبَّلَ اللّٰهُ مِنَّا وَمِنْكُمْ<br>আল্লাহ আমাদের ও আপনাদের নেক আমল কবুল করুন।
+</div>
+<div id="letter" class="content-box">
+<p style="font-size:18px;line-height:1.6">
+ঈদের শুভেচ্ছা ও ভালোবাসা সবার জন্য রইল।<br>
+আপনাদের জীবন হোক সুখ ও শান্তিতে ভরা।
+</p>
+</div>
+<div id="bonus" class="content-box">
+<p style="font-size:18px;line-height:1.5">
+সম্মানিত প্রিয়জন,<br>
+ঈদের খুশিতে ছোট্ট একটি ঈদ বোনাস পাঠালে খুশি হবো।<br>
+Nagad: 01336959550<br>
+WhatsApp: 0130135490
+<div class="hand" style="top:20px;left:20px"></div>
+<div class="hand" style="top:20px;right:20px"></div>
+<div class="hand" style="top:50px;left:50%"></div>
+</p>
+</div>
+</div>
+
+<div class="card">
+<h2>📷 PHOTOR</h2>
+<img src="yourphoto.jpg">
+<br><h2 style="font-size:28px;color:#ffd700;">ঈদ মোবারক</h2>
+<br><button onclick="likePhoto()">❤️ Like</button>
+<p>Likes: <span id="likecount">0</span></p>
+<p>ঈদের বোনাস না দিলে অন্তত একটা লাইক দিয়ে যান</p>
+</div>
+
+<div class="card">
+<h2>🎮 Eid Mini Game</h2>
+<p>Gift ধরুন!</p>
+<div id="game"><div id="player">🧍</div></div>
+<p>Score: <span id="score">0</span></p>
+</div>
+
+<div class="card">
+<h2>💬 আমাকে Wish করুন</h2>
+<textarea id="comment" placeholder="ঈদের শুভেচ্ছা লিখুন"></textarea><br>
+<button onclick="sendComment()">Send</button><br><br>
+<button onclick="viewComments()">Private Comments</button>
+</div>
+
+<div class="card">
+<h2>🔗 Share</h2>
+<button onclick="shareSite()">Share This Site</button>
+</div>
+
+<footer class="footer">
+<p>🍬 এই নেন মিষ্টিমুখ করুন 🍬</p>
+<div class="ad">
+এরকম ওয়েবসাইট বানাতে এখনই ইনবক্স করুন।<br>প্রিয়জনকে খুশি করতে এমন ওয়েবসাইট বানানো দারুণ একটি উপহার।
+</div>
+</footer>
+
+<script>
+function showBox(id){document.querySelectorAll('.content-box').forEach(e=>e.style.display='none');document.getElementById(id).style.display='block';}
+let v=localStorage.getItem('visitors')||1;localStorage.setItem('visitors',v);document.getElementById('visitors').innerText=v;
+let likes=localStorage.getItem('likes')||0;let liked=localStorage.getItem('liked');document.getElementById('likecount').innerText=likes;
+function likePhoto(){if(liked){alert('আপনি আগে লাইক দিয়েছেন');return;}likes++;localStorage.setItem('likes',likes);localStorage.setItem('liked',true);document.getElementById('likecount').innerText=likes;}
+function shareSite(){if(navigator.share){navigator.share({title:'Eid Mubarak',text:'🌙 Eid Mubarak',url:window.location.href});}}
+let comments=[];function sendComment(){let txt=document.getElementById('comment').value;if(txt.trim()==='')return;comments.push(txt);document.getElementById('comment').value='';alert('আপনার শুভেচ্ছা সেভ হয়েছে');}
+function viewComments(){let pass=prompt('Password দিন');if(pass=='9900'){alert(comments.join('\n'));}else{alert('Wrong password');}}
+function fireworks(){for(let i=0;i<20;i++){let f=document.createElement('div');f.className='firework';f.style.left=Math.random()*100+'vw';f.style.top=Math.random()*50+'vh';document.body.appendChild(f);setTimeout(()=>f.remove(),1000);}};setInterval(fireworks,3500);
+let eidDate=new Date('March 31, 2026 00:00:00').getTime();
+setInterval(()=>{let now=new Date().getTime();let diff=eidDate-now;let d=Math.floor(diff/(1000*60*60*24));let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));let m=Math.floor((diff%(1000*60*60))/(1000*60));document.getElementById('countdown').innerText=(diff>0?d+' দিন '+h+' ঘন্টা '+m+' মিনিট':'🌙 Eid Mubarak!')},1000);
+let playerX=150;let score=0;document.addEventListener('keydown',e=>{if(e.key=='ArrowLeft')playerX-=20;if(e.key=='ArrowRight')playerX+=20;document.getElementById('player').style.left=playerX+'px';});
+function dropGift(){let g=document.createElement('div');g.className='gift';g.innerText='🎁';g.style.left=Math.random()*280+'px';let game=document.getElementById('game');game.appendChild(g);let y=0;let fall=setInterval(()=>{y+=4;g.style.top=y+'px';if(y>200 && Math.abs(playerX-parseInt(g.style.left))<40){score++;document.getElementById('score').innerText=score;clearInterval(fall);g.remove()}if(y>240){clearInterval(fall);g.remove()}},30)}
+setInterval(dropGift,1500);
+</script>
+</body>
+</html>
